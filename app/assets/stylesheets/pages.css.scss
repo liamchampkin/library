@@ -1,3 +1,26 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+
+$blue : #C6CCE7;
+$lightblue: #ECEEF7;
+$pink: #D44E8B;
+
+.blue{
+	color: $blue;
+}
+
+.box1{
+	background-color: $lightblue;
+}
+
+.box2{
+	background-color: $blue;
+}
+
+.clearboth{
+	clear: both;
+}
+
