@@ -3,24 +3,346 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "bootstrap";
+@import "print.css";
 
-$blue : #C6CCE7;
-$lightblue: #ECEEF7;
-$pink: #D44E8B;
+$blue: #C6CCE7;
+$light-blue: #ECEEF7; //light greyish blue for footer and selected menu states etc.
+$dark-blue: #000066;
+$button-blue: #DDDDEE;
+$pink: #D44E8B; //pink highlights
+$green: #89BF99;
+$yellow: #E69C45;
+$accordian-green: lighten($green, 30%);
+$accordian-yellow: lighten($yellow, 35%);
+$dark-purple: #7781B0;
+$border-radius: 10px;
+$margin: 20px;
 
-.blue{
-	color: $blue;
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+  .box1{
+    min-width: 500px;
+    clear: both;
+  }
 }
 
-.box1{
-	background-color: $lightblue;
+//snippets
+a{
+  color: $pink;
 }
 
-.box2{
-	background-color: $blue;
+a:hover{
+  color: $dark-blue;
 }
 
-.clearboth{
-	clear: both;
+//main styles
+
+body,html{
+  height: 100%;
+  font-size: 16px;
+  background: #fff url(/assets/body-bg.jpg) 0 0 repeat-x;
+}
+#content{
+  height: 81%;
+  position: relative;
+}
+#wrapper{
+  min-height: 100%;
+  height: auto !important;
+  height: 100% !important;
+  margin: 0 $margin -40px;
+  position: relative;
 }
 
+.row-fluid.box-container{
+  height: 100%;
+}
+
+//header styles
+#header{
+  height: 160px;
+  margin-bottom: $margin;
+}
+
+#header-right{
+  height: 100%;
+}
+
+#logo.span3{
+  height: 100px;
+  margin-top: $margin;
+}
+
+.span12.top-menu{
+  height: 50%;
+  margin-bottom: 15px;
+}
+
+.span12.login{
+  height: 80px;
+  margin: 0px;
+}
+
+.login-box{
+  background-color: $light-blue;
+  margin: 0 0 $margin 0;
+  height: 65px;
+  @include border-radius (20px);
+}
+
+.login-title{
+  background-color: $blue;
+  height: 100%;
+  @include border-left-radius($border-radius);
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  min-width: 100px;
+}
+
+.login-title span{
+  vertical-align: middle ;
+  text-align: center;
+  padding-top: 43px;
+}
+
+//navigation styles
+
+#main-navigation ul{
+  height: 50px;
+}
+
+
+#main-navigation li{
+  display: inline;
+  line-height: 50px;
+  padding: 50px 10px;
+  position: relative;
+}
+
+#main-navigation li.separator{
+  display: inline;
+
+}
+
+#main-navigation li {
+  background: transparent url(/assets/nav-separator.png) right 34px no-repeat;
+  padding-right: 10px;
+}
+
+#main-navigation li:last-child {
+  background: none;
+}
+
+//footer styles
+#footer{
+  height: 40px;
+}
+
+.footer{
+  background-color: $light-blue;
+}
+
+.left-column{
+  height: 100%;
+}
+
+.span2 .box1{
+  background-color: $light-blue;
+  @include border-left-radius($border-radius);
+  height: 30%;
+  margin-bottom: $margin;
+}
+
+.box-header.span10{
+  background: $blue url(/assets/circles.png) center -113px no-repeat;
+  @include border-top-radius($border-radius);
+  padding: $margin $margin 0 $margin;
+}
+
+.box-header{
+
+  
+}
+
+#wrapper .box2{
+  background-color: $blue;
+  padding: 0 $margin $margin $margin;
+  @include border-bottom-radius($border-radius);
+  height: 85%;
+  display: block;
+}
+
+.box2 .header{
+  height: 20%;
+}
+
+
+.span12 h2{
+  height: 20%;
+}
+
+.box2 .column2{
+  z-index: 1;
+  position: relative;
+}
+
+.box2 .column2 ul{
+  list-style: none;
+  margin: 0px;
+}
+
+.box2 .column2 li{
+  border-bottom: 1px solid $light-blue;
+  padding: 7px 10px;
+}
+
+.box2 .column2 a li{
+  color: $dark-blue;
+}
+
+.box2 .column2 a:hover,
+.box2 .column2 a li:hover{
+  background-color: $light-blue;
+  text-decoration: none;
+}
+
+.box2 .column2 a.current li{
+  background-color: $pink;
+  color: #fff;
+  background: $pink url(/assets/arrow.png) right 9px no-repeat;
+}
+
+.scroll-pane{
+  background-color: white;
+  position: relative ;
+  overflow: auto ;
+  height: 100%;
+}
+
+//scroller styles
+.whitebox.span9.scroll-pane.mCustomScrollbar._mCS_3{
+  margin-left: 0;
+  width: 76.5%;
+  z-index: 0;
+  position: relative;
+  @include box-shadow(#dadada 5px 0px 7px 0px inset);
+}
+
+.mCSB_container{
+  margin-right: 19px;
+}
+
+.mCSB_draggerContainer{
+  border: 1px solid $blue;
+  background-color: $light-blue;
+}
+
+.mCSB_scrollTools .mCSB_dragger{
+  @include border-radius($border-radius);
+  background: #434D94 url(/assets/scroll-bg.png) 0 0 no-repeat;
+  background: #7781b0; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc3ODFiMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzYTQ0OGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  #7781b0 0%, #3a448e 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7781b0), color-stop(100%,#3a448e)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #7781b0 0%,#3a448e 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #7781b0 0%,#3a448e 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #7781b0 0%,#3a448e 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #7781b0 0%,#3a448e 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7781b0', endColorstr='#3a448e',GradientType=0 ); /* IE6-8 */
+  box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.5) inset;
+  border: 1px solid #3A448E;
+  width: 17px;
+}
+
+.mCSB_dragger_bar{
+  display: none;
+}
+
+.mCSB_draggerRail{
+  display: none;
+}
+
+.mCustomScrollBox .mCSB_scrollTools{
+  width: 20px;
+}
+
+.row-fluid .column2,
+.row-fluid .column3{
+  margin-left: 0px;
+}
+
+#content .action-left{
+  margin: 0px;
+  float: left;
+}
+
+//acordian
+.accordion-group {
+  border-bottom: 1px solid $light-blue;
+  border-top: 0px solid $light-blue;
+  border-left: 0px solid $light-blue;
+  border-right: 0px solid $light-blue;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.accordion-inner {
+    border-top: 0px;
+    padding: 9px 15px;
+}
+
+.accordian-green .active,
+.accordian-green .accordion-body{
+    background-color: $accordian-green;
+}
+
+.accordian-yellow .active,
+.accordian-yellow .accordion-body{
+    background-color: $accordian-yellow;
+}
+
+.accordion-heading .collapsed{
+  background-color: #fff;
+}
+
+//button styles
+
+#header-right .login-form .btn{
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-image: -moz-linear-gradient(top, #8f98ca #3f4991);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#8f98ca), to(#3f4991));
+  background-image: -webkit-linear-gradient(top, #8f98ca #3f4991);
+  background-image: -o-linear-gradient(top, #8f98ca #3f4991);
+  background-image: linear-gradient(to bottom, #8f98ca #3f4991);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FF3f4991', GradientType=0);
+  border-color: #3f4991 #3f4991 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #3f4991;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  *margin-left: .3em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,74 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap"
+
+$blue : #C6CCE7
+$light-blue: #ECEEF7 //light greyish blue for footer and selected menu states etc.
+$button-blue: #DDDDEE
+$pink: #D44E8B //pink highlights
+$green: #89BF99
+$dark-purple: #7781B0
+$border-radius: 10px
+
+body,html
+  height: 100%
+
+#wrapper
+  height: 100%
+
+#header
+  height: 150px
+
+#footer
+  background-color: $blue
+  height: 35px
+
+.blue
+  color: $blue
+
+.box1
+  background-color: $light-blue
+  +border-left-radius($border-radius)
+
+.box2
+  background-color: $blue
+  padding: 20px
+  +border-radius($border-radius)
+  height: 100%
+  margin-bottom: 20px
+
+.row-fluid .span10,
+.box2 .row-fluid .span2 
+.box1 .row-fluid .span2
+  margin-left: 20px
+
+.clearboth
+  clear: both
+
+.whitebox-container
+  height: 92%
+
+.whitebox-title
+  height: 60px
+
+.whitebox
+  background-color: white
+
+.row-fluid .column2,
+.row-fluid .column3
+  margin-left: 0px
+
+//scroll styles
+.jspDrag
+  background-color: $dark-purple
+  height: 30px
+
+.jspTrack
+  background: none repeat scroll 0 0 $button-blue
+  position: relative
+
+        
+
+      
