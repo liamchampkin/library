@@ -1,243 +1,328 @@
+%script
+
+
 #wrapper
   .row-fluid
-    #header  
+    #header.row-fluid
+      #logo.span3
+        %img{:alt => "Mymaths logo", :src => "/assets/logo.png"}/
+      #header-right.span9
+        .span12.top-menu
+          .span5.offset3
+            #main-navigation.span12
+              %ul
+                %li.separator
+                  %a{:href => ""} Assessment manager
+                %li.separator
+                  %a{:href => ""} Help
+                %li
+                  %a{:href => ""} Log out
+          .span4
+            %form.navbar-form
+              %input.span9{:type => "text"}/
+              %button.btn{:type => "submit"} Search
+        .span12.login
+          .span8.login-box
+            .span2.login-title
+              %span My portal
+            .span10.login-form
+              %form.navbar-form
+                %span Login
+                %input.span3{:type => "text"}/
+                %span Password
+                %input.span3{:type => "text"}/
+                %button.btn{:type => "submit"} Go
+                %button.btn{:type => "submit"} ?
+    .row-fluid.header-row2
 
     #content.row-fluid
-      .box1.span2.scroll-pane.jScrollPane
-        %ul  
-          %a(href="/")  
-            %li Home  
-          %a(href="about")  
-            %li About  
-          %a(href="/")  
-            %li Home  
-          %a(href="about")  
-            %li About  
-          %a(href="/")  
-            %li Home  
-          %a(href="about")  
-            %li About  
-          %a(href="/")  
-            %li Home  
-          %a(href="about")  
-            %li About  
-          %a(href="/")  
-            %li Home  
-          %a(href="about")  
-            %li About  
-          %a(href="/")  
-            %li Home  
-          %a(href="about")  
-            %li About  
-          %a(href="/")  
-            %li Home  
-          %a(href="about")  
-            %li About  
-          %a(href="/")  
-            %li Home  
-          %a(href="about")  
-            %li About  
-
-      .box2.span10
-        .whitebox-title
+      .span2.left-column
+        .box1.scroll-pane
+          #tree1
+        .span2.action-left
+          %p Curriculum
+          .btn-group
+            %button.btn.btn-large UK GCSE
+            %button.btn.btn-large.dropdown-toggle{"data-toggle" => "dropdown"}
+              %span.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => ""} link 1
+              %li
+                %a{:href => ""} link 2
+              %li
+                %a{:href => ""} link 3
+              %li
+                %a{:href => ""} link 4
+              %li.divider
+              %li
+                %a{:href => ""} Separated link
+      .box-header.span10
+        .span9
           %h2 Number
-        .whitebox-container
-          .whitebox.column2.span3.scroll-pane.jScrollPane.nomargin
+        .span3
+          .btn-group.pull-right
+            %button.btn.btn-large All
+            %button.btn.btn-large.dropdown-toggle{"data-toggle" => "dropdown"}
+              %span.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => ""} link 1
+              %li
+                %a{:href => ""} link 2
+              %li
+                %a{:href => ""} link 3
+              %li
+                %a{:href => ""} link 4
+              %li.divider
+              %li
+                %a{:href => ""} Separated link
+      .box2.span10
+        .row-fluid.box-container
+          .whitebox.span3.scroll-pane.column2
             %ul  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-          .whitebox.column3.span9.scroll-pane.jScrollPane
-            %ul  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-              %a(href="/")  
-                %li Home  
-              %a(href="about")  
-                %li About  
-    .clearboth      
-    #footer  
+              %a{:href => ""} 
+                %li Add Subtract Mental
+              %a{:href => ""} 
+                %li Add Subtract Written
+              %a{:href => ""} 
+                %li Counting and Place Value
+              %a.current{:href => ""} 
+                %li Decimals
+              %a{:href => ""} 
+                %li Estimating and Accuracy
+              %a{:href => ""} 
+                %li Fractions
+              %a{:href => ""} 
+                %li Money and finance
+              %a{:href => ""} 
+                %li Multiply Divide Mental
+              %a{:href => ""} 
+                %li Multiply Divide Written
+              %a{:href => ""} 
+                %li Percentages
+              %a{:href => ""} 
+                %li Powers and Roots
+              %a{:href => ""} 
+                %li Ratio and Proportion
+              %a{:href => ""} 
+                %li Standard Form
+              %a{:href => ""} 
+                %li Add Subtract Mental
+              %a{:href => ""} 
+                %li Add Subtract Written
+              %a{:href => ""} 
+                %li Counting and Place Value
+              %a{:href => ""} 
+                %li Decimals
+              %a{:href => ""} 
+                %li Estimating and Accuracy
+              %a{:href => ""} 
+                %li Fractions
+              %a{:href => ""} 
+                %li Money and finance
+              %a{:href => ""} 
+                %li Multiply Divide Mental
+              %a{:href => ""} 
+                %li Multiply Divide Written
+              %a{:href => ""} 
+                %li Percentages
+              %a{:href => ""} 
+                %li Powers and Roots
+              %a{:href => ""} 
+                %li Ratio and Proportion
+              %a{:href => ""} 
+                %li Standard Form
+              %a{:href => ""} 
+                %li Add Subtract Mental
+              %a{:href => ""} 
+                %li Add Subtract Written
+              %a{:href => ""} 
+                %li Counting and Place Value
+              %a{:href => ""} 
+                %li Decimals
+              %a{:href => ""} 
+                %li Estimating and Accuracy
+              %a{:href => ""} 
+                %li Fractions
+              %a{:href => ""} 
+                %li Money and finance
+              %a{:href => ""} 
+                %li Multiply Divide Mental
+              %a{:href => ""} 
+                %li Multiply Divide Written
+              %a{:href => ""} 
+                %li Percentages
+              %a{:href => ""} 
+                %li Powers and Roots
+              %a{:href => ""} 
+                %li Ratio and Proportion
+              %a{:href => ""} 
+                %li Standard Form
+              %a{:href => ""} 
+                %li Add Subtract Mental
+              %a{:href => ""} 
+                %li Add Subtract Written
+              %a{:href => ""} 
+                %li Counting and Place Value
+              %a{:href => ""} 
+                %li Decimals
+              %a{:href => ""} 
+                %li Estimating and Accuracy
+              %a{:href => ""} 
+                %li Fractions
+              %a{:href => ""} 
+                %li Money and finance
+              %a{:href => ""} 
+                %li Multiply Divide Mental
+              %a{:href => ""} 
+                %li Multiply Divide Written
+              %a{:href => ""} 
+                %li Percentages
+              %a{:href => ""} 
+                %li Powers and Roots
+              %a{:href => ""} 
+                %li Ratio and Proportion
+              %a{:href => ""} 
+                %li Standard Form
+          .whitebox.span9.scroll-pane.column3
+            #accordion2.accordion
 
+              .accordion-group.accordian-green
+                .accordion-heading
+                  %a.accordion-toggle.active{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseOne"}
+                    Collapsible Group Item #1
+                #collapseOne.accordion-body.collapse.in
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group.accordian-green
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseTwo"}
+                    Collapsible Group Item #2
+                #collapseTwo.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group.accordian-green
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseThree"}
+                    Collapsible Group Item #3
+                #collapseThree.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group.accordian-yellow
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseFour"}
+                    Collapsible Group Item #4
+                #collapseFour.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group.accordian-yellow
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseFive"}
+                    Collapsible Group Item #5
+                #collapseFive.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group.accordian-yellow
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseSix"}
+                    Collapsible Group Item #6
+                #collapseSix.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseSeven"}
+                    Collapsible Group Item #7
+                #collapseSeven.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseEight"}
+                    Collapsible Group Item #8
+                #collapseEight.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseNine"}
+                    Collapsible Group Item #9
+                #collapseNine.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseTen"}
+                    Collapsible Group Item #10
+                #collapseTen.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseEleven"}
+                    Collapsible Group Item #11
+                #collapseEleven.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseTwelve"}
+                    Collapsible Group Item #12
+                #collapseTwelve.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseThirteen"}
+                    Collapsible Group Item #13
+                #collapseThirteen.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseFourteen"}
+                    Collapsible Group Item #14
+                #collapseFourteen.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseFifteen"}
+                    Collapsible Group Item #15
+                #collapseFifteen.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseSixteen"}
+                    Collapsible Group Item #16
+                #collapseSixteen.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseSeventeen"}
+                    Collapsible Group Item #17
+                #collapseSeventeen.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+
+
+#footer.footer  
