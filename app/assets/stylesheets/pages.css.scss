@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "bootstrap";
-@import "print.css";
+@import "print.css.scss";
 
 $blue: #C6CCE7;
 $light-blue: #ECEEF7; //light greyish blue for footer and selected menu states etc.
@@ -16,6 +16,7 @@ $accordian-green: lighten($green, 30%);
 $accordian-yellow: lighten($yellow, 35%);
 $dark-purple: #7781B0;
 $border-radius: 10px;
+$button-radius: 10px;
 $margin: 20px;
 
 /* Landscape phone to portrait tablet */
@@ -27,13 +28,8 @@ $margin: 20px;
 }
 
 //snippets
-a{
-  color: $pink;
-}
 
-a:hover{
-  color: $dark-blue;
-}
+
 
 //main styles
 
@@ -56,6 +52,10 @@ body,html{
 
 .row-fluid.box-container{
   height: 100%;
+}
+
+.breadcrumb{
+  padding: 0px;
 }
 
 //header styles
@@ -90,6 +90,10 @@ body,html{
   @include border-radius (20px);
 }
 
+.search-box{
+  margin: 0px;
+}
+
 .login-title{
   background-color: $blue;
   height: 100%;
@@ -108,15 +112,13 @@ body,html{
 
 //navigation styles
 
-#main-navigation ul{
-  height: 50px;
+.header-nav{
+  float: right;
 }
-
 
 #main-navigation li{
   display: inline;
-  line-height: 50px;
-  padding: 50px 10px;
+  padding: 0px 10px 50px 0;
   position: relative;
 }
 
@@ -126,7 +128,7 @@ body,html{
 }
 
 #main-navigation li {
-  background: transparent url(/assets/nav-separator.png) right 34px no-repeat;
+  background: transparent url(/assets/nav-separator.png) right 0px no-repeat;
   padding-right: 10px;
 }
 
@@ -134,9 +136,13 @@ body,html{
   background: none;
 }
 
-//footer styles
-#footer{
-  height: 40px;
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: transparent;
+}
+
+//breadcrumb
+.breadcrumb {
+    background-color: transparent;
 }
 
 .footer{
@@ -197,20 +203,26 @@ body,html{
   padding: 7px 10px;
 }
 
-.box2 .column2 a li{
+.box2 a,
+{
   color: $dark-blue;
 }
 
 .box2 .column2 a:hover,
-.box2 .column2 a li:hover{
+.box2 .column2 a li:hover,
+a.accordion-toggle:hover{
   background-color: $light-blue;
   text-decoration: none;
+  -webkit-transition:color 0.3s ease 0s;  
+  -moz-transition:color 0.3s ease 0s;  
+  -o-transition:color 0.3s ease 0s;  
+  transition:color 0.3s ease 0s;  
 }
 
 .box2 .column2 a.current li{
   background-color: $pink;
   color: #fff;
-  background: $pink url(/assets/arrow.png) right 9px no-repeat;
+  background: $pink url(/assets/arrow.png) right 50% no-repeat;
 }
 
 .scroll-pane{
@@ -289,8 +301,8 @@ body,html{
 }
 
 .accordion-inner {
-    border-top: 0px;
-    padding: 9px 15px;
+  border-top: 0px;
+  padding: 9px 16px 0 0;
 }
 
 .accordian-green .active,
@@ -302,47 +314,167 @@ body,html{
 .accordian-yellow .accordion-body{
     background-color: $accordian-yellow;
 }
-
 .accordion-heading .collapsed{
   background-color: #fff;
 }
 
+.accordion-heading .accordion-toggle{
+  position: relative;
+  height: 30px;
+  padding: 10px 15px;
+}
+
+.header-icon{
+  height: 35px;
+  width: 35px;
+  top: -4px;
+  position: relative;
+}
+
+.icon-green{
+  background: transparent url(/assets/sprite.png) 0 0 no-repeat;
+  height: 35px;
+  width: 35px !important;
+}
+
+.icon-yellow{
+  background: transparent url(/assets/sprite.png) -50px 0 no-repeat;
+  height: 35px;
+  width: 35px !important;
+}
+
+
+.column-header span {
+    line-height: 1.7;
+}
+
+.column-3-number{
+  padding: 1px 10px 0 0;
+}
+
+.column-3-number span{
+  width: 26px;
+  height: 26px;
+  position: inline;
+  float: right;
+  position: relative;
+  left: 15px;
+  margin: 0px;
+  padding: 2px 0 0 0px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.active .column-3-number span{
+  background: transparent url(/assets/pink-circle.png) 0 0 no-repeat;
+  width: 26px;
+  height: 26px;
+  color: #fff;
+  position: inline;
+
+  padding: 2px 0 0 0px;
+  text-align: center;
+}
+
 //button styles
 
-#header-right .login-form .btn{
+#wrapper .btn{
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
   *zoom: 1;
-  padding: 4px 12px;
   margin-bottom: 0;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  color: #333333;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  background-image: -moz-linear-gradient(top, #8f98ca #3f4991);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#8f98ca), to(#3f4991));
-  background-image: -webkit-linear-gradient(top, #8f98ca #3f4991);
-  background-image: -o-linear-gradient(top, #8f98ca #3f4991);
-  background-image: linear-gradient(to bottom, #8f98ca #3f4991);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FF3f4991', GradientType=0);
+  color: #fff;
+  text-shadow: 0 0px 0px rgba(255, 255, 255, 0.75);
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#8F98CA), to(#3F4991));
+ background-image: -webkit-linear-gradient(top, #8F98CA, #3F4991);
+ background-image: -moz-linear-gradient(top, #8F98CA, #3F4991);
+ background-image: -ms-linear-gradient(top, #8F98CA, #3F4991);
+ background-image: -o-linear-gradient(top, #8F98CA, #3F4991);
+ background-image: linear-gradient(to bottom, #8F98CA, #3F4991);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#8F98CA, endColorstr=#3F4991);
   border-color: #3f4991 #3f4991 #bfbfbf;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #3f4991;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-  border: 1px solid #cccccc;
   *border: 0;
-  border-bottom-color: #b3b3b3;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  border:1px solid #6975b8; 
+  -webkit-border-radius: $button-radius; 
+  -moz-border-radius: $button-radius;
+  border-radius: $button-radius;
   *margin-left: .3em;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
+
+#wrapper .btn:hover, #wrapper .btn:focus {
+  border:1px solid #4e5ba5; 
+  background-color: #6c78ba;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6c78ba), top(#30376d));
+  background-image: -webkit-linear-gradient(top, #6c78ba, #30376d);
+  background-image: -moz-linear-gradient(top, #6c78ba, #30376d);
+  background-image: -ms-linear-gradient(top, #6c78ba, #30376d);
+  background-image: -o-linear-gradient(top, #6c78ba, #30376d);
+  background-image: linear-gradient(to bottom, #6c78ba, #30376d);
+  filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#6c78ba, endColorstr=#30376d);
+  transition: background-position 0 linear 0s;
+  background-position: 0px !important;
+}
+
+#wrapper .btn-search{
+  -webkit-border-top-right-radius: $button-radius;
+  -webkit-border-bottom-right-radius: $button-radius;
+  -moz-border-radius-topright: $button-radius;
+  -moz-border-radius-bottomright: $button-radius;
+  border-top-right-radius: $button-radius;
+  border-bottom-right-radius: $button-radius;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  position: relative;
+  left: 2px;
+}
+
+#wrapper .btn-large{
+  -webkit-border-top-right-radius: $button-radius;
+  -webkit-border-bottom-right-radius: $button-radius;
+  -moz-border-radius-topright: $button-radius;
+  -moz-border-radius-bottomright: $button-radius;
+  border-top-left-radius: $button-radius;
+  border-bottom-left-radius: $button-radius;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#wrapper .dropdown-toggle{
+  -webkit-border-top-right-radius: $button-radius;
+  -webkit-border-bottom-right-radius: $button-radius;
+  -moz-border-radius-topright: $button-radius;
+  -moz-border-radius-bottomright: $button-radius;
+  border-top-right-radius: $button-radius;
+  border-bottom-right-radius: $button-radius;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {
+    background-color: $light-blue;
+    background-image: none;
+    background-repeat: repeat-x;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-large .caret {
+border-top-color: white !important;
+border-bottom-color: white !important;
+}
+
+
+

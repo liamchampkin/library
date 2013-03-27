@@ -1,6 +1,3 @@
-%script
-
-
 #wrapper
   .row-fluid
     #header.row-fluid
@@ -8,19 +5,21 @@
         %img{:alt => "Mymaths logo", :src => "/assets/logo.png"}/
       #header-right.span9
         .span12.top-menu
-          .span5.offset3
+          .span8
             #main-navigation.span12
-              %ul
+              %ul.nav.nav-pills.header-nav
                 %li.separator
                   %a{:href => ""} Assessment manager
                 %li.separator
                   %a{:href => ""} Help
                 %li
                   %a{:href => ""} Log out
+                %li
+                  %a{:href => ""} Another link
           .span4
             %form.navbar-form
-              %input.span9{:type => "text"}/
-              %button.btn{:type => "submit"} Search
+              %input.span9.search-box{:type => "text"}/
+              %button.btn.btn-search{:type => "submit"} Search
         .span12.login
           .span8.login-box
             .span2.login-title
@@ -40,7 +39,7 @@
         .box1.scroll-pane
           #tree1
         .span2.action-left
-          %p Curriculum
+          %p Curriculum:
           .btn-group
             %button.btn.btn-large UK GCSE
             %button.btn.btn-large.dropdown-toggle{"data-toggle" => "dropdown"}
@@ -87,9 +86,9 @@
                 %li Add Subtract Written
               %a{:href => ""} 
                 %li Counting and Place Value
-              %a.current{:href => ""} 
-                %li Decimals
               %a{:href => ""} 
+                %li Decimals
+              %a.current{:href => ""} 
                 %li Estimating and Accuracy
               %a{:href => ""} 
                 %li Fractions
@@ -191,58 +190,207 @@
               .accordion-group.accordian-green
                 .accordion-heading
                   %a.accordion-toggle.active{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseOne"}
-                    Collapsible Group Item #1
+                    .column-3-number.span1
+                      %span 1
+                    .column-header.span10
+                      %span Number Facts and Doubles 1
+                    .header-icon.icon-green.span1
                 #collapseOne.accordion-body.collapse.in
-                  .accordion-inner
-                    Anim pariatur cliche...
+                  .accordion-inner.row-fluid
+                    .span11.offset1
+                      %p 
+                        Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.
+                    .row-fluid
+                      .span11.offset1
+                        %p
+                          %a.btn.btn-primary{:href => "#"} Lesson
+                          %a.btn.btn-primary{:href => "#"} Online Homework
+                    .rowfluid
+                      .span11.offset1
+                        %ul.breadcrumb
+                          %li
+                            %a{:href => "#"} Library
+                            %span.divider >
+                          %li
+                            %a{:href => "#"} Number
+                            %span.divider >
+                          %li.active Data
 
               .accordion-group.accordian-green
                 .accordion-heading
                   %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseTwo"}
-                    Collapsible Group Item #2
+                    .column-3-number.span1
+                      %span 2
+                    .column-header.span10
+                      %span Number Facts and Doubles 2
+                    .header-icon.icon-green.span1
                 #collapseTwo.accordion-body.collapse
-                  .accordion-inner
-                    Anim pariatur cliche...
+                  .accordion-inner.row-fluid
+                    .span11.offset1
+                      %p 
+                        Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.
+                    .row-fluid
+                      .span11.offset1
+                        %p
+                          %a.btn.btn-primary{:href => "#"} Lesson
+                          %a.btn.btn-primary{:href => "#"} Online Homework
+                    .rowfluid
+                      .span11.offset1
+                        %ul.breadcrumb
+                          %li
+                            %a{:href => "#"} Library
+                            %span.divider >
+                          %li
+                            %a{:href => "#"} Number
+                            %span.divider >
+                          %li.active Data
 
               .accordion-group.accordian-green
-                .accordion-heading
+                .accordion-heading.row-fluid
                   %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseThree"}
-                    Collapsible Group Item #3
+                    .column-3-number.span1
+                      %span 3
+                    .column-header.span10
+                      %span Number Facts and Doubles 3
+                    .header-icon.icon-green.span1
+
                 #collapseThree.accordion-body.collapse
-                  .accordion-inner
-                    Anim pariatur cliche...
+                  .accordion-inner.row-fluid
+                    .span11.offset1
+                      %p 
+                        Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.
+                    .row-fluid
+                      .span11.offset1
+                        %p
+                          %a.btn.btn-primary{:href => "#"} Lesson
+                          %a.btn.btn-primary{:href => "#"} Online Homework
+                    .rowfluid
+                      .span11.offset1
+                        %ul.breadcrumb
+                          %li
+                            %a{:href => "#"} Library
+                            %span.divider >
+                          %li
+                            %a{:href => "#"} Number
+                            %span.divider >
+                          %li.active Data
+
 
               .accordion-group.accordian-yellow
                 .accordion-heading
                   %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseFour"}
-                    Collapsible Group Item #4
+                    .column-3-number.span1
+                      %span 4
+                    .column-header.span10
+                      %span Number Bonds
+                    .header-icon.icon-yellow.span1
                 #collapseFour.accordion-body.collapse
-                  .accordion-inner
-                    Anim pariatur cliche...
+                  .accordion-inner.row-fluid
+                    .span11.offset1
+                      %p 
+                        Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.
+                    .row-fluid
+                      .span11.offset1
+                        %p
+                          %a.btn.btn-primary{:href => "#"} Lesson
+                          %a.btn.btn-primary{:href => "#"} Online Homework
+                    .rowfluid
+                      .span11.offset1
+                        %ul.breadcrumb
+                          %li
+                            %a{:href => "#"} Library
+                            %span.divider >
+                          %li
+                            %a{:href => "#"} Number
+                            %span.divider >
+                          %li.active Data
 
               .accordion-group.accordian-yellow
                 .accordion-heading
                   %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseFive"}
-                    Collapsible Group Item #5
+                    .column-3-number.span1
+                      %span 5
+                    .column-header.span10
+                      %span Counting On and Back
+                    .header-icon.icon-yellow.span1
                 #collapseFive.accordion-body.collapse
-                  .accordion-inner
-                    Anim pariatur cliche...
+                  .accordion-inner.row-fluid
+                    .span11.offset1
+                      %p 
+                        Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.
+                    .row-fluid
+                      .span11.offset1
+                        %p
+                          %a.btn.btn-primary{:href => "#"} Lesson
+                          %a.btn.btn-primary{:href => "#"} Online Homework
+                    .rowfluid
+                      .span11.offset1
+                        %ul.breadcrumb
+                          %li
+                            %a{:href => "#"} Library
+                            %span.divider >
+                          %li
+                            %a{:href => "#"} Number
+                            %span.divider >
+                          %li.active Data
 
               .accordion-group.accordian-yellow
                 .accordion-heading
                   %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseSix"}
-                    Collapsible Group Item #6
+                    .column-3-number.span1
+                      %span 5
+                    .column-header.span10
+                      %span Counting On and Back
+                    .header-icon.icon-yellow.span1
                 #collapseSix.accordion-body.collapse
-                  .accordion-inner
-                    Anim pariatur cliche...
+                  .accordion-inner.row-fluid
+                    .span11.offset1
+                      %p 
+                        Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.
+                    .row-fluid
+                      .span11.offset1
+                        %p
+                          %a.btn.btn-primary{:href => "#"} Lesson
+                          %a.btn.btn-primary{:href => "#"} Online Homework
+                    .rowfluid
+                      .span11.offset1
+                        %ul.breadcrumb
+                          %li
+                            %a{:href => "#"} Library
+                            %span.divider >
+                          %li
+                            %a{:href => "#"} Number
+                            %span.divider >
+                          %li.active Data
 
               .accordion-group
                 .accordion-heading
                   %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseSeven"}
-                    Collapsible Group Item #7
+                    .column-3-number.span1
+                      %span 7
+                    .column-header.span10
+                      %span Counting On and Back
+                    .header-icon.icon-yellow.span1
                 #collapseSeven.accordion-body.collapse
-                  .accordion-inner
-                    Anim pariatur cliche...
+                  .accordion-inner.row-fluid
+                    .span11.offset1
+                      %p 
+                        Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.Knowing simple pairs that add up to 100 and 1000.
+                    .row-fluid
+                      .span11.offset1
+                        %p
+                          %a.btn.btn-primary{:href => "#"} Lesson
+                          %a.btn.btn-primary{:href => "#"} Online Homework
+                    .rowfluid
+                      .span11.offset1
+                        %ul.breadcrumb
+                          %li
+                            %a{:href => "#"} Library
+                            %span.divider >
+                          %li
+                            %a{:href => "#"} Number
+                            %span.divider >
+                          %li.active Data
 
               .accordion-group
                 .accordion-heading
